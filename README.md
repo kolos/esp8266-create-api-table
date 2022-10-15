@@ -7,6 +7,13 @@ This python prebuild script generates an html table in a cpp header file for the
 
 ![Screenshot](screenshot.png)
 
+### Sample of the output file: `http_apis.h`
+```cpp
+PROGMEM const char http_apis_html_content_type[] = "text/html";
+PROGMEM const char http_apis_html[] = {0x1f, 0x8b, 0x8, 0x0, ....};
+const uint16_t http_apis_html_len = 374;
+```
+
 ### How does it work
 
 1. Scans `*.ino` files for `ESP8266WebServer` instances
